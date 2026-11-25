@@ -1,6 +1,6 @@
 {
   "name": "@exxxp_07/zkteco-sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Pure-TypeScript client for ZKTeco devices: no COM, no vendor DLLs, no 32-bit bridge.",
   "type": "module",
   "main": "./dist/index.js",
