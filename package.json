@@ -1,0 +1,60 @@
+{
+  "name": "@exxxp_07/zkteco-sdk",
+  "version": "0.1.0",
+  "description": "Pure-TypeScript client for ZKTeco devices: no COM, no vendor DLLs, no 32-bit bridge.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "docs/PROTOCOL.md"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18.12"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "node --test test/",
+    "smoke": "node scripts/smoke.ts",
+    "typecheck": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "keywords": [
+    "zkteco",
+    "attendance",
+    "time-attendance",
+    "biometrics",
+    "fingerprint",
+    "face-recognition",
+    "uface",
+    "tcp",
+    "sdk"
+  ],
+  "author": "exxxp_07",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/najm07/zkteco-sdk.git"
+  },
+  "homepage": "https://github.com/najm07/zkteco-sdk#readme",
+  "bugs": {
+    "url": "https://github.com/najm07/zkteco-sdk/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.3"
+  }
+}
