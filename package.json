@@ -24,7 +24,7 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
-    "test": "node --test test/",
+    "test": "node --test \"test/**/*.test.ts\"",
     "smoke": "node scripts/smoke.ts",
     "typecheck": "tsc -p tsconfig.json",
     "prepublishOnly": "npm run typecheck && npm test && npm run build"
